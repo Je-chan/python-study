@@ -29,6 +29,9 @@ print(a.keys()) # dict_keys(['name', 'tall'])
 ### 1-4) values() : value 값 모두 반환
 print(a.values()) # dict_values(['박예찬', '184'])
 
-### 1-5) get() : 해당 key 값의 value 를 가져오는 것. 만약 해당 key 가 없다면 None을 반환한다.
+### 1-5) items() : (key, value) 의 형태로 key, value 를 모두 반환한다.
+print(a.items()) # dict_items([('name', '박예찬'), ('tall', '184')])
+
+### 1-6) get() : 해당 key 값의 value 를 가져오는 것. 만약 해당 key 가 없다면 None을 반환한다.
 # print(a[123]) => 에러를 발생시킨다
 print(a.get(123)) # None
