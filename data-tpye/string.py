@@ -48,6 +48,10 @@ print(a.count('a')) # 0
 print('     --  --  --         '.strip()) 
 
 ### 5-7. 그외 replace, split, upper, lower, join => 자바스크립트와 유사함
+#### join 의 경우, 인자로 받은 것들 인덱스 사이에 끼워 넣는다는 느낌으로 가지고 가면 된다.
+print(','.join('abcd')) # a,b,c,d
+print('/'.join(['a', 'b', 'c', 'd'])) # a/b/c/d
+
 
 
 ## 6. 포매팅
