@@ -16,7 +16,7 @@ print(gen(10)) # <generator object gen at 0x7fe291e589e0>
 a = gen(10)
 print(a) # <generator object gen at 0x7fc890e889e0>
 
-## yield 는 gen(10)은 yield 로 지금 바로 계산되지 않은 상태. 다른 명령어로 호출을 해야지만이 사용이 가능해진다
+## yield 는 gen(10)은 yield 로 지금 바로 계산되지 않은 상태. 다른 명령어로 호출을 해야지만이 사용이 가능해진다 (for 문도 마찬가지)
 
 print(list(a)) # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 
