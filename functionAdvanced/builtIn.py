@@ -23,13 +23,21 @@ for index, i in enumerate(['하나', '둘', '셋', '넷']):
 # > zip(리스트 1, 리스트 2) : 두 개의 리스트를 합쳐서 각 리스트의 원소 쌍을 원소로 갖는 리스트로 반환
 list1 = [1, 2, 3, 4]
 list2 = [5, 6, 7, 8]
-print(zip(list1, list2)) # 이것도 지금 generator
+print(zip(list1, list2))  # 이것도 지금 generator
 print(list(zip(list1, list2)))
 
 # > map(함수, 컬렉션) : 컬렉션(list, tuple 등)의 모든 데이터를 함수의 매개변수로 대입해서 결과를 리턴
-print(map(lambda x : x+1, [1, 2, 3, 4])) # 이것도 generator
-print(list(map(lambda x: x+1, [1, 2, 3, 4])))
+print(map(lambda x: x + 1, [1, 2, 3, 4]))  # 이것도 generator
+print(list(map(lambda x: x + 1, [1, 2, 3, 4])))
 
- # > filter(함수, 컬렉션) : 컬렉션의 모든 데이터를 함수의 매개변수로 대입홰 결과가 참인 멤버들을 반환
-print(list(filter(lambda x: x%2 == 0, [1, 2, 3, 4]))) # 이것도 generator
+arrayEg = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+result1 = list(map(lambda x: x * x * x, arrayEg))
+print(result1)
 
+# 람다 함수 매개변수가 두 개 들어갈 수 있다
+# map 을 돌리때 람다 매개변수가 두개, 컬렉션 두개를 돌린다고 하면 같은 인덱스에 존재하는 요소들이 람다의 매개변수로 들어간다
+result2 = list(map(lambda x, y: x * y, arrayEg, arrayEg))
+print(result2)
+
+# > filter(함수, 컬렉션) : 컬렉션의 모든 데이터를 함수의 매개변수로 대입홰 결과가 참인 멤버들을 반환
+print(list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4])))  # 이것도 generator
