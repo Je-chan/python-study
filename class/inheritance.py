@@ -27,9 +27,6 @@ class super_calculator(add_calculator):
         print('one more')
         print('calc 3 : ', super().addition(x, y))
 
+
 calc3 = super_calculator()
 calc3.addition(3, 4)
-
-
-
-
