@@ -30,3 +30,18 @@ class super_calculator(add_calculator):
 
 calc3 = super_calculator()
 calc3.addition(3, 4)
+
+
+class Call:
+    # __call__ 특수 메소드
+    # > 객체를 메소드처럼 호출할 때 실행한다.
+    def __call__(self, *a):
+        print('속보: ')
+        for i in a:
+            print(i)
+
+
+c1 = Call()
+# 객체 스스로가 메소드처럼 실행되는 것.
+c1()
+c1('가', '나나', '다가', '라라')
