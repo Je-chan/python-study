@@ -24,3 +24,40 @@ a = 3
 
 print(isinstance(a, int))
 print(isinstance(test1, int))
+
+
+# Example
+class Animal(metaclass=ABCMeta):
+    def __init__(self, eat1='just'):
+        self.eat1 = eat1
+
+    def eat(self):
+        print('Eating for life')
+
+    @abstractmethod
+    def move(self): pass
+
+
+class Bird(Animal):
+    def move(self):
+        print('Flying {}'.format(self.eat1))
+
+
+class Person(Animal):
+    def move(self): print('두발로 걷는다 {}'.format(self.eat1))
+
+
+class Fish(Animal):
+    def move(self): print('지느러미로 헤엄친다')
+
+
+b1 = Bird()
+p1 = Person('많이')
+f1 = Fish()
+
+animal = [b1, p1, f1]
+
+for an in animal:
+    print('==========')
+    an.eat()
+    an.move()
