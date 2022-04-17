@@ -28,9 +28,15 @@ import json
 jsonData = json.dumps({'a': 'b', 'c': 'd'})
 print(jsonData)
 print(json.loads(jsonData))
-
+ 
 # with open('test.txt', 'w') as f:
     # json.dump([1, 2, 3, {'4': 5, '6': 7}], f) => 파일에 json 화된 객체를 저장
 
 # with open('test.txt', 'r') as f:
     # json.load(f) => JSON 화된 data 를 list, dictionary 등으로 복원
+
+
+#
+# import os
+# dir_list = os.listdir("./") => 현재 디렉토리 안에 있는 하위 디렉토리들을 반환
+# os.mkdir("test") => 파일을 생성
